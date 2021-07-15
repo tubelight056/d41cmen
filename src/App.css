@@ -1,38 +1,382 @@
-.App {
+html{
+  scroll-behavior: smooth;
+}
+
+img{
+  filter: drop-shadow(0px 0px 10px #585858);
+}
+
+body {
+  font-size: 18px;
+  margin: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+
+.nav-li {
+  display: inline-block;
+  margin: 0 2%;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 24px;
+}
+.nav-ul {
+  display: block;
+  min-width: 370px;
+  width: 500px;
+  justify-self: right;
+}
+.nav-title {
+  margin: 24px;
+  margin-left: 50px;
+  color: blue;
+  font-size: 3em;
+}
+.nav-listcontainer {
+  margin: 2% 2%;
+  display: grid;
+  padding-top: 10px;
+  justify-content: right;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 20% 60%;
+  justify-content: space-between;
+}
+.menu-icon {
+  position: absolute;
+  top: -10%;
+  margin: 20px;
+  font-size: 5em;
+  background-color: white;
+  color: blue;
+  border: unset;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 972px) {
+  body{
+    margin:5px;
+  }
+  .menu-icon {
+    top: 0%;
+    margin-top: 20px;
+    right: 1%;
+    visibility: visible;
+    font-size: 4em;
+  }
+  .nav-container {
+    grid-template-columns: 90%;
+  }
+  .nav-ul {
+    display: block;
+    width: 100%;
+    margin: 0px;
+  }
+  .nav-link {
+    padding: 30px;
+  }
+  .nav-listcontainer {
+    margin: 20px 10px;
+    width: 97%;
+    border-radius: 18px;
+    background-color: blue;
+    padding-top: 20px;
+    position: absolute;
+    left: 0%;
+    top: 100px;
+    transition: left 1s;
+  }
+  .responsive {
+    display:flex;
+  }
+  .nonresponsive {
+    display: none;
+  }
+  .nav-title {
+    margin: 32px 50px;
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+  }
+  .nav-li {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .nav-link {
+    color: white;
+  }
+}
+
+/* home-----------------------------------------------------*/
+
+.home-container {
+  display: grid;
+  grid-template-columns: 50% 45%;
+  margin: 24px;
+  grid-column-gap: 5%;
+  margin-bottom: 200px;
+}
+.home-text {
+  margin:0px 25px ;
+}
+.home-h1 {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+.home-p {
+  font-size: 2rem;
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+.home-img {
+  padding: 20px;
+  padding-bottom: 0px;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+  /* background-color: skyblue; */
+}
+
+@media screen and (max-width: 1700px) {
+}
+.span-men {
+  color: white;
+  background-color: blue;
+}
+.span-trendy {
+  font-weight: bolder;
+  color: blue;
+}
+
+.home-btn {
+  display: grid;
+  grid-template-columns: 240px 240px;
+  grid-row-gap: 20px;
+}
+
+.home-gotoinstagram {
+  padding: 18px 30px;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+  border-radius: 18px;
+}
+
+.home-explorehere {
+  padding: 18px 30px;
+  border-color: blue;
+  border-width: 2px;
+  color: blue;
+  font-size: 24px;
+  border-radius: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-container {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .home-h1 {
+    margin-top: 10px;
+    font-size: 4em;
+  }
+  .home-btn {
+    display: block;
+    align-content: center;
+  }
+  .home-img {
+   display: none;
+  }
+  .home-gotoinstagram {
+    display: block;
+    border-radius: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .home-explorehere {
+    display: block;
+    text-align: center;
+  }
+
+  .home-p {
+    margin-bottom: 50px;
+  }
+}
+
+/* Aboutus-------------------- */
+
+.aboutus-container {
+  background-color: blue;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  place-items: center;
+  border-radius: 60px;
+}
+.aboutus-h1 {
+  display: inline-block;
+  color: white;
+  margin-top: 60px;
+  font-size: 15em;
+  width: 400px;
+  margin-bottom: 50px;
+  text-align: center;
+  justify-self: center;
+}
+.aboutus-p {
+  display: inline;
+  color: white;
+  align-self: center;
+  font-size: 2rem;
+  place-items: center;
+  text-align: center;
+  justify-self: center;
+  margin-bottom: 50px;
+  font-weight: 500;
+  line-height: 2em;
+}
+.span-d41cmen {
+  color: blue;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 999px) {
+  .aboutus-p {
+    display: block;
+    line-height: 1.5em;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: left;
+    place-items: center;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .aboutus-h1 {
+    font-size: 10em;
+    margin-bottom: 50px;
+  }
+}
+
+/* Explore */
+.explore-h1 {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.explore-collection {
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(390px, 19rem));
+  width:95vw;
+  grid-column-gap: 30px;
+  grid-row-gap:20px;
+}
+.explore-text {
+  height: 350px;
+  padding: 0 20%;
+  text-align: center;
+  padding-top: 20%;
+}
+.explore-text:hover {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media screen and (max-width: 980px) {
+  .explore-collection {
+    justify-content: center;
+  }
+  .explore-imgcontainer {
+    justify-content: center;
   }
 }
+/* card */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-img {
+  height: 350px;
+  width:100%;
+  align-self: center;
+  justify-self: center;
+}
+.card-img:hover {
+  background-color: rgba(100, 100, 250,0.5);
+  cursor: pointer;
+  border-radius: 15px;
+}
+.hover-change {
+  position: absolute;
+  z-index: 2;
+  padding: 25px;
+  color:yellow;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.7em;
+  border-radius: 15px;
+}
+@media screen and (max-width: 980px) {
+  .card-container {
+    text-align: center;
+  }
+  
+  .hover-change {
+    padding-left: 10px;
+  }
+  .card-img {
+  }
+}
+/* contactus */
+
+.contactus-appcontainer {
+  display: grid;
+  grid-template-columns:repeat(auto-fit,100px);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.contactus-container {
+  text-align: center;
+  background-color: blue;
   color: white;
+  margin: 25px;
+  padding: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.app-icon {
+  padding: 10%;
+  background-color: white;
+  margin: 10px;
+  border-radius: 18px;
+  border-width: 3px solid;
+  border-color: black;
+  cursor: pointer;
+}
+.app {
+  background-color: white;
+}
+.review {
+  font-size: 2 rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.review-title {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.review-review {
+  font-size: 2rem;
+  padding: 5%;
+}
+
+.icon-copyright {
+  padding: 50px;
+}
+
+.icon-copyrighta {
+  color: white;
 }
